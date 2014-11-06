@@ -1,21 +1,21 @@
-MLPostMasterBundle
+# MLPostMasterBundle
 
 Symfony2 bundle for PostMaster API And Export API
 
-License
+## License
 
 MLPostMasterBundle is licensed under the MIT License - see the Resources/meta/LICENSE file for details
 
 
 https://www.postmaster.io/
-Requirements
+## Requirements
 
     "require": {
 				"php": ">=5.3.2",
 				"symfony/framework-bundle": "2.*"
 				},
 
-Installation:
+## Installation:
 
 - add to your composer.json in the require section: "lasri/postmaster-bundle": "dev-master" 
 - install your dependecies:
@@ -34,7 +34,7 @@ ml_post_master:
 
 
 
-Issues
+## Issues
 
 Please use appropriately tagged github issues to request features or report bugs.
 
