@@ -9,27 +9,29 @@ MLPostMasterBundle is licensed under the MIT License - see the Resources/meta/LI
 
 https://www.postmaster.io/
 ## Requirements
-
+```
     "require": {
 				"php": ">=5.3.2",
 				"symfony/framework-bundle": "2.*"
 				},
-
+```
 ## Installation:
 
 - add to your composer.json in the require section: "lasri/postmaster-bundle": "dev-master" 
 - install your dependecies:
 
-   	php composer.phar require  "lasri/postmaster-bundle": "dev-master" 
+   ```	php composer.phar require  "lasri/postmaster-bundle": "dev-master" ```
     
 - add the bundle to your AppKernel:
    
-	new ML\PostMasterBundle\MLPostMasterBundle(),
+```	new ML\PostMasterBundle\MLPostMasterBundle(),```
 
 - in your config.yml 
 
-ml_post_master:
-    api_key: *************************  your api key here
+``` ml_post_master:
+    api_key: *************************  your api key here 
+    
+    ```
 
 
 
@@ -39,7 +41,7 @@ ml_post_master:
 Please use appropriately tagged github issues to request features or report bugs.
 
 Usage:
-		
+```		
 		$postmaster = $this->get('postmaster');
 		$add= $postmaster->getAddressValidation();
     	$addR= $add->validate(array("company" => "Postmaster Inc.",
@@ -136,3 +138,4 @@ Usage:
         var_dump($packR);
 
         die;
+        ```
