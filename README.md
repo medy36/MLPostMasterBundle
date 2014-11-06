@@ -6,13 +6,6 @@ License
 
 MLPostMasterBundle is licensed under the MIT License - see the Resources/meta/LICENSE file for details
 
-Postmaster
-
-Developer Friendly Shipping
-
-Postmaster takes the pain out of sending shipments via UPS, Fedex, and USPS.
-
-Save money before you ship, while you ship, and after you ship.
 
 https://www.postmaster.io/
 Requirements
@@ -21,6 +14,25 @@ Requirements
 				"php": ">=5.3.2",
 				"symfony/framework-bundle": "2.*"
 				},
+
+Installation:
+
+- add to your composer.json in the require section: "lasri/postmaster-bundle": "dev-master" 
+- install your dependecies:
+
+   	php composer.phar require  "lasri/postmaster-bundle": "dev-master" 
+    
+- add the bundle to your AppKernel:
+   
+	new ML\PostMasterBundle\MLPostMasterBundle(),
+
+- in your config.yml 
+
+ml_post_master:
+    api_key: *************************  your api key here
+
+
+
 
 Issues
 
