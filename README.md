@@ -27,7 +27,8 @@ MLPostMasterBundle is licensed under the MIT License - see the Resources/meta/LI
 
 - in your config.yml 
 
-``` ml_post_master:
+```
+ml_post_master:
     	api_key: **********your api key here ***************
   ```  	
 ## Issues
