@@ -1,19 +1,17 @@
 # MLPostMasterBundle
 
-Symfony2 bundle for PostMaster API And Export API
+Symfony2 bundle for PostMaster API (https://www.postmaster.io/)
 
 ## License
 
 MLPostMasterBundle is licensed under the MIT License - see the Resources/meta/LICENSE file for details
 
-
-https://www.postmaster.io/
 ## Requirements
 ```
     "require": {
-				"php": ">=5.3.2",
-				"symfony/framework-bundle": "2.*"
-				},
+			"php": ">=5.3.2",
+			"symfony/framework-bundle": "2.*"
+			},
 ```
 ## Installation:
 
@@ -31,15 +29,14 @@ https://www.postmaster.io/
 
 ``` ml_post_master:
     	api_key: **********your api key here ***************  
-    
     ```
-
 ## Issues
 
 Please use appropriately tagged github issues to request features or report bugs.
 
 Usage:
 ```		
+/***********************************************************/
 	$postmaster = $this->get('postmaster');
 	$add= $postmaster->getAddressValidation();
     	$addR= $add->validate(array("company" => "Postmaster Inc.",
@@ -52,7 +49,7 @@ Usage:
     	));
 
         var_dump($addR);
-
+/***********************************************************/
         $tran = $postmaster->getTransitTimes();
         $tranR = $tran->get(
         array(
@@ -61,8 +58,9 @@ Usage:
 	        "weight" => 22.5,
 	        "carrier" => "fedex",
         ));
+        
         var_dump($tranR);
-
+/***********************************************************/
         $rate = $postmaster->getRates();
         $rateR = $rate->get(array(
 	        "from_zip" => "78701",
@@ -70,11 +68,9 @@ Usage:
 	        "weight" => 0.5,
 	        "carrier" => "fedex",
         ));
-       
-
+        
         var_dump($rateR); 
-
-
+    /***********************************************************/    
         $ship = $postmaster->getShipment();
         $shipR = $ship->create(array(
 	        "to" => array(
@@ -107,10 +103,9 @@ Usage:
             ),
         ),
         ));
+        
         var_dump($shipR);
-
-
-
+/***********************************************************/
         /* monitor external package */
         $trac = $postmaster->getTracking();
         $tracR = $trac->monitor_external(array(
@@ -118,10 +113,9 @@ Usage:
 	        "url" => "http://example.com/your-http-post-listener",
 	        "events" => ["Delivered", "Exception"]
         ));
+        
         var_dump($tracR);
-
-
-
+/***********************************************************/
         /* create box example */
         $pack = $postmaster->getPackage();
         $packR = $pack->create(array(
