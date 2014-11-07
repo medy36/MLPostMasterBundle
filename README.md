@@ -36,7 +36,7 @@ Please use appropriately tagged github issues to request features or report bugs
 
 Usage:
 ```		
-/***********************************************************/
+
 	$postmaster = $this->get('postmaster');
 	$add= $postmaster->getAddressValidation();
     	$addR= $add->validate(array("company" => "Postmaster Inc.",
@@ -49,7 +49,7 @@ Usage:
     	));
 
         var_dump($addR);
-/***********************************************************/
+
         $tran = $postmaster->getTransitTimes();
         $tranR = $tran->get(
         array(
@@ -60,7 +60,7 @@ Usage:
         ));
         
         var_dump($tranR);
-/***********************************************************/
+
         $rate = $postmaster->getRates();
         $rateR = $rate->get(array(
 	        "from_zip" => "78701",
@@ -70,7 +70,7 @@ Usage:
         ));
         
         var_dump($rateR); 
-    /***********************************************************/    
+  
         $ship = $postmaster->getShipment();
         $shipR = $ship->create(array(
 	        "to" => array(
@@ -105,7 +105,7 @@ Usage:
         ));
         
         var_dump($shipR);
-/***********************************************************/
+
         /* monitor external package */
         $trac = $postmaster->getTracking();
         $tracR = $trac->monitor_external(array(
@@ -115,7 +115,7 @@ Usage:
         ));
         
         var_dump($tracR);
-/***********************************************************/
+
         /* create box example */
         $pack = $postmaster->getPackage();
         $packR = $pack->create(array(
