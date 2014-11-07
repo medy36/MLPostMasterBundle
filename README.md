@@ -29,12 +29,13 @@ MLPostMasterBundle is licensed under the MIT License - see the Resources/meta/LI
 
 ``` ml_post_master:
     	api_key: **********your api key here ***************  
+    
     ```
 ## Issues
 
 Please use appropriately tagged github issues to request features or report bugs.
 
-Usage:
+###Usage:
 ```		
 
 	$postmaster = $this->get('postmaster');
